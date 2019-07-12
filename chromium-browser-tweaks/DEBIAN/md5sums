@@ -1,6 +1,5 @@
-aafd87afb40dd9014cff19dbe880fa07  DEBIAN/control
-31e769e07321574f083f183aa1ebed0a  DEBIAN/dpkg-divert
-744e825aaa3e4a30c77f0348b39df7e9  DEBIAN/preinst
+5e2bde8039591c0e65de04372d515652  DEBIAN/preinst
 3060eb4390b119bca283bdefc55de885  DEBIAN/postrm
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+1a25d433eedcde4e9e5c440a64c93c72  DEBIAN/control
 470bbebdf4b4984bedbd622ce7d4a8f6  usr/bin/chromium-browser

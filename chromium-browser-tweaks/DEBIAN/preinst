@@ -4,12 +4,12 @@ package_name=chromium-browser-tweaks
 
 case "$1" in
   install)
-    dpkg-divert --package "$package_name" --divert "/usr/bin/chromium-browser.distrib" --rename "/usr/bin/chromium-browser"
+    dpkg-divert --package "$package_name" --divert "/usr/bin/chromium-browser.orig" --rename "/usr/bin/chromium-browser"
     ;;
   upgrade)
 if [ "$(dpkg-divert --list "/usr/bin/chromium-browser")" = "" ]
 then
-    dpkg-divert --package "$package_name" --divert "/usr/bin/chromium-browser.distrib" --rename "/usr/bin/chromium-browser"
+    dpkg-divert --package "$package_name" --divert "/usr/bin/chromium-browser.orig" --rename "/usr/bin/chromium-browser"
 fi
 ;;
 esac
