@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+package_name=chromium-browser-tweaks
+mkdir -p "/usr/share/dpkgdivert/chromium-browser-tweaks"
+case "$1" in
+  install)
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/chromium-browser-tweaks/usrbinchromium-browser" --rename "/usr/bin/chromium-browser"
+    ;;
+  upgrade)
+if [ "$(dpkg-divert --list "/usr/bin/chromium-browser")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/chromium-browser-tweaks/usrbinchromium-browser" --rename "/usr/bin/chromium-browser"
+fi
+;;
+esac
+exit 0

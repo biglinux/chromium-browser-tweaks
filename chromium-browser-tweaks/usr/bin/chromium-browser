@@ -1,0 +1,86 @@
+#!/bin/bash
+
+widevine=0
+
+# if file exist not search widevine
+if [ -e "$HOME/.config/nowidevine" ]
+then
+    widevine=0
+
+# Verify if widevine in chromium is installed
+elif [ -e "/usr/lib/chromium-browser/libwidevinecdm.so" ]
+then
+    widevine=0
+
+# Verify winevine from chrome
+elif [ -e "/opt/google/chrome/libwidevinecdm.so" ]
+then
+    widevine=1
+
+# Verify widevine from netflix firefox
+elif [ "$(find ~/.netflix/gmp-widevinecdm -name 'libwidevinecdm.so' 2> /dev/null)" != "" ]
+then
+    widevine=2
+
+# Verify widevine from prime video firefox
+elif [ "$(find ~/.primevideo/gmp-widevinecdm -name 'libwidevinecdm.so' 2> /dev/null)" != "" ]
+then
+    widevine=3
+
+# Verify widevine from firefox
+elif [ "$(find ~/.mozilla/firefox/*.default/gmp-widevinecdm/ -name 'libwidevinecdm.so' 2> /dev/null)" != "" ]
+then
+    widevine=4
+fi
+
+
+if [ "$widevine" != "0" ]; then
+
+yad --form --text $"\nDetectei a presença do plugin widevine no sistema,\nporém não está ativo no navegador Chromium,\neste plugin possibilita consumir conteúdo protegido\npor DRM, por exemplo, vídeos do site Netflix.\n\n\nDeseja ativar o suporte à DRM no navegador Chromium?" \
+--button="Me pergunte depois":1 \
+--button=gtk-no:0 \
+--button=gtk-yes:2 \
+--center --on-top --borders=20 --title="Chromium Widevine"
+
+    yadresult=$?
+    if [ "$yadresult" = "0" ]; then
+        touch "$HOME/.config/nowidevine"
+    fi
+
+    if [ "$yadresult" = "2" ]; then
+        if [ "$widevine" = "1" ]; then
+            echo 'cp -f /opt/google/chrome/libwidevinecdm.so /usr/lib/chromium-browser/libwidevinecdm.so
+            chmod 755 /usr/lib/chromium-browser/libwidevinecdm.so' > /tmp/bigwidevine
+            chmod +x "/tmp/bigwidevine"
+            bigsudo "/tmp/bigwidevine"
+        fi
+
+        if [ "$widevine" = "2" ]; then
+            echo "cp -f $(find ~/.netflix/gmp-widevinecdm -name libwidevinecdm.so 2> /dev/null | tail -n1) /usr/lib/chromium-browser/libwidevinecdm.so
+            chmod 755 /usr/lib/chromium-browser/libwidevinecdm.so" > /tmp/bigwidevine
+            chmod +x "/tmp/bigwidevine"
+            bigsudo "/tmp/bigwidevine"
+        fi
+
+        if [ "$widevine" = "3" ]; then
+            echo "cp -f $(find ~/.primevideo/gmp-widevinecdm -name libwidevinecdm.so 2> /dev/null | tail -n1) /usr/lib/chromium-browser/libwidevinecdm.so
+            chmod 755 /usr/lib/chromium-browser/libwidevinecdm.so" > /tmp/bigwidevine
+            chmod +x "/tmp/bigwidevine"
+            bigsudo "/tmp/bigwidevine"
+        fi
+
+        if [ "$widevine" = "4" ]; then
+            echo "cp -f $(find ~/.mozilla/firefox/*.default/gmp-widevinecdm/ -name libwidevinecdm.so 2> /dev/null | tail -n1) /usr/lib/chromium-browser/libwidevinecdm.so
+            chmod 755 /usr/lib/chromium-browser/libwidevinecdm.so" > /tmp/bigwidevine
+            chmod +x "/tmp/bigwidevine"
+            bigsudo "/tmp/bigwidevine"
+        fi
+
+    fi
+
+fi
+
+#chromium-class &
+
+exec /usr/bin/chromium-browser.orig --user-agent="Mozilla/5.0 (X11; Linux amd64) AppleWebKit/637.36 (KHTML, like Gecko) Chrome/98.0.3202.97 Safari/637.36" $*
+
