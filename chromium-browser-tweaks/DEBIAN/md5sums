@@ -1,5 +1,5 @@
 5e2bde8039591c0e65de04372d515652  DEBIAN/preinst
 3060eb4390b119bca283bdefc55de885  DEBIAN/postrm
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
-4bc64a9ba1f0e68498008172ebb2a171  DEBIAN/control
-09d6041bef2d878d402fd8f0306abe03  usr/bin/chromium-browser
+9633c7ee8e381a7b2646c842c25a33c7  DEBIAN/control
+2708259c0ca4dbc07a2a4c29ee173ce9  usr/bin/chromium-browser
