@@ -2,4 +2,4 @@
 3060eb4390b119bca283bdefc55de885  DEBIAN/postrm
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
 75b8cdea258c1db21f867bb6e80a2c40  DEBIAN/control
-9777cbc3e9b8a0d8b2e9245914ac2bb6  usr/bin/chromium-browser
+8a908548f431dcead3ac4364f75e6f98  usr/bin/chromium-browser
