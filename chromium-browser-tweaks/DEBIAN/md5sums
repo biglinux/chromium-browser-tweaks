@@ -1,5 +1,13 @@
 5e2bde8039591c0e65de04372d515652  DEBIAN/preinst
 3060eb4390b119bca283bdefc55de885  DEBIAN/postrm
 d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
-75b8cdea258c1db21f867bb6e80a2c40  DEBIAN/control
-8a908548f431dcead3ac4364f75e6f98  usr/bin/chromium-browser
+4d2f47f471627569adccdf2683284975  DEBIAN/control
+f4a32d1d34dd36a86ef93d2a4f47a09e  DEBIAN/languages
+5a55a0b5a9e196e88e113ff67faead42  DEBIAN/pt.po
+cc2d7a00de9f69092d0a4da1fd816caf  DEBIAN/chromium-browser-tweaks.pot
+3cf55a415ef920a306eed4acafd85dfd  DEBIAN/en.po
+9d59d3b051e5e5394fc5426b08511f50  DEBIAN/es.po
+8c60859a0862dfb2999dcc2c0dcf5b78  usr/bin/chromium-browser
+2446ee15ee4f0a6855b1c345a216019e  usr/share/locale/en/LC_MESSAGES/chromium-browser-tweaks.mo
+9e2dedec985e4629ce1fc848b02701f3  usr/share/locale/es/LC_MESSAGES/chromium-browser-tweaks.mo
+d7de95d198a14539a63c2ba22a9ab364  usr/share/locale/pt/LC_MESSAGES/chromium-browser-tweaks.mo
