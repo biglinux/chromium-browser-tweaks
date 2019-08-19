@@ -40,7 +40,8 @@ yad --form --text $"\nDetectei a presença do plugin widevine no sistema,\nporé
 --button=$"Me pergunte depois":1 \
 --button=gtk-no:0 \
 --button=gtk-yes:2 \
---center --on-top --borders=20 --title="Chromium Widevine"
+--center --on-top --borders=20 --title="Chromium Widevine" \
+--windows-icon="big-plugins"
 
     yadresult=$?
     if [ "$yadresult" = "0" ]; then
