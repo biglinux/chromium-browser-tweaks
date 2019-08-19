@@ -1,0 +1,26 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the chromium-browser-tweaks package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid   ""
+msgstr  "Project-Id-Version: chromium-browser-tweaks\n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2019-08-19 08:15-0300\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+
+msgid   "\\nDetectei a presença do plugin widevine no sistema,\\nporém não "
+        "está ativo no navegador Chromium,\\neste plugin possibilita consumir "
+        "conteúdo protegido\\npor DRM, por exemplo, vídeos do site Netflix.\\n"
+        "\\n\\nDeseja ativar o suporte à DRM no navegador Chromium?"
+msgstr  ""
+
+msgid   "Me pergunte depois"
+msgstr  ""

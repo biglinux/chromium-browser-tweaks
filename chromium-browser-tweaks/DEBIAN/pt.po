@@ -1,0 +1,28 @@
+# Portuguese translations for chromium-browser-tweaks package.
+# Copyright (C) 2019 THE chromium-browser-tweaks'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the chromium-browser-tweaks package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: chromium-browser-tweaks\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-19 08:15-0300\n"
+"PO-Revision-Date: 2019-08-18 23:01-0300\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+"\\nDetectei a presença do plugin widevine no sistema,\\nporém não está ativo "
+"no navegador Chromium,\\neste plugin possibilita consumir conteúdo protegido"
+"\\npor DRM, por exemplo, vídeos do site Netflix.\\n\\n\\nDeseja ativar o "
+"suporte à DRM no navegador Chromium?"
+msgstr ""
+
+msgid "Me pergunte depois"
+msgstr ""

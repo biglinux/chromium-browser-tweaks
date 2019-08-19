@@ -37,7 +37,7 @@ fi
 if [ "$widevine" != "0" ]; then
 
 yad --form --text $"\nDetectei a presença do plugin widevine no sistema,\nporém não está ativo no navegador Chromium,\neste plugin possibilita consumir conteúdo protegido\npor DRM, por exemplo, vídeos do site Netflix.\n\n\nDeseja ativar o suporte à DRM no navegador Chromium?" \
---button="Me pergunte depois":1 \
+--button=$"Me pergunte depois":1 \
 --button=gtk-no:0 \
 --button=gtk-yes:2 \
 --center --on-top --borders=20 --title="Chromium Widevine"
