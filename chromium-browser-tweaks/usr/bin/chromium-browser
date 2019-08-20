@@ -41,7 +41,7 @@ yad --form --text $"\nDetectei a presença do plugin widevine no sistema,\nporé
 --button=gtk-no:0 \
 --button=gtk-yes:2 \
 --center --on-top --borders=20 --title="Chromium Widevine" \
---windows-icon="big-plugins"
+--window-icon="chromium-browser"
 
     yadresult=$?
     if [ "$yadresult" = "0" ]; then
